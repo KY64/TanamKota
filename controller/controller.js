@@ -12,12 +12,6 @@ exports.listSensor = (req, res) => {
 };
 
 exports.addSensor = (req, res) => {
-  
-  req.query.time = () => {
-      let time = new Date()
-      return time.toLocaleString()
-  }
-
   var newSensor = new sensor(req.query);
   newSensor.save((err, sensor) => {
     if (err) res.send(err);
