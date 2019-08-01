@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "sensor-api",
+    "builds": [
+      { "src": "server.js", "use": "@now/node" }
+    ],
+    "routes": [
+      { "src": "/api/data/.*", "dest": "./routes/router.js" }
+    ]
+  }
