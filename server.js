@@ -18,10 +18,10 @@ Next.prepare().then(() => {
         return handle(req,res)
     })
 
-    module.exports = app
+    // module.exports = app
 
-    // app.listen(PORT, err => {
-    //     if(err) throw err
-    //     console.log('Berhasil cuy koneksi ke PORT ', PORT)
-    // })
+    app.listen(PORT, err => {
+        if(err) throw err
+        console.log('Berhasil cuy koneksi ke PORT ', PORT)
+    })
 })
