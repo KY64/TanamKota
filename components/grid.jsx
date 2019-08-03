@@ -13,12 +13,11 @@ export default props => (
       .grid, .grid-m {
         display: grid;
         width: 100%;
-        height: 35em;
         grid-template-areas:
           "navbar header header"
           "navbar card1 card2"
           "navbar card3 card4";
-        grid-template-columns: 60px 1fr 1fr;
+        grid-template-columns: 65px 1fr 1fr;
       }
       .grid-m {
         grid-template-columns: 1fr;

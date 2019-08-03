@@ -13,7 +13,7 @@ Next.prepare().then(() => {
 
     app.use(express.urlencoded({extended: true}))
     app.use(express.json())
-    app.use('/api', require('./routes/router'))
+    app.use('/', require('./routes/router'))
     app.get('*', (req,res) => {
         return handle(req,res)
     })

@@ -2,6 +2,9 @@ const mongoose = require("mongoose"),
       model = require("../model/model"),
       sensor = mongoose.model("sensor");
 
+//========================
+//        SENSOR
+//========================
 exports.listSensor = (req, res) => {
   sensor
     .find({}, (err, sensor) => {
@@ -53,3 +56,10 @@ exports.deleteAllSensor = (req, res) => {
     res.json(sensor);
   });
 };
+
+//========================
+//        USER
+//========================
+exports.isLogin = (req,res) => {
+  res.redirect('/dashboard')
+}

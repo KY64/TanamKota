@@ -29,19 +29,19 @@ class Navbar extends Component {
             onMouseLeave={this.viewText}
           >
             <div className="nav-link">
-              <FontAwesomeIcon style={{ fontSize: "14pt" }} icon={faListAlt} />
+              <i className="fas fa-list-alt" style={{fontSize: "14pt"}}></i>
               <span className="text desc">Dashboard</span>
             </div>
             <div className="nav-link">
-              <FontAwesomeIcon style={{ fontSize: "14pt" }} icon={faChartBar} />
+              <i className="fas fa-chart-bar" style={{fontSize: "14pt"}}></i>
               <span className="text desc">Analytics</span>
             </div>
             <div className="nav-link">
-              <FontAwesomeIcon style={{ fontSize: "14pt" }} icon={faArchive} />
+              <i className="fas fa-archive" style={{fontSize: "14pt"}}></i>
               <span className="text desc">Log</span>
             </div>
             <div className="nav-link">
-              <FontAwesomeIcon style={{ fontSize: "14pt" }} icon={faCog} />
+              <i className="fas fa-cog" style={{fontSize: "14pt"}}></i>
               <span className="text desc">Settings</span>
             </div>
           </nav>
@@ -55,19 +55,19 @@ class Navbar extends Component {
             onMouseLeave={this.viewText}
           >
             <div className="nav-link-m">
-              <FontAwesomeIcon style={{ fontSize: "11pt" }} icon={faListAlt} />
+              <FontAwesomeIcon style={{ fontSize: "12pt" }} icon={faListAlt} />
               <span className="text desc">Dashboard</span>
             </div>
             <div className="nav-link-m">
-              <FontAwesomeIcon style={{ fontSize: "11pt" }} icon={faChartBar} />
+              <FontAwesomeIcon style={{ fontSize: "12pt" }} icon={faChartBar} />
               <span className="text desc">Analytics</span>
             </div>
             <div className="nav-link-m">
-              <FontAwesomeIcon style={{ fontSize: "11pt" }} icon={faArchive} />
+              <FontAwesomeIcon style={{ fontSize: "12pt" }} icon={faArchive} />
               <span className="text desc">Log</span>
             </div>
             <div className="nav-link-m">
-              <FontAwesomeIcon style={{ fontSize: "11pt" }} icon={faCog} />
+              <FontAwesomeIcon style={{ fontSize: "12pt" }} icon={faCog} />
               <span className="text desc">Settings</span>
             </div>
           </nav>
@@ -88,7 +88,7 @@ class Navbar extends Component {
 
           .navbar-m {
             width: 100%;
-            height: 30px;
+            height: 50px;
             flex-direction: row;
             padding: 0;
             justify-content: space-around;

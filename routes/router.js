@@ -1,15 +1,19 @@
 const express = require('express'),
       app = express(),
-      sensor = require('../controller/controller')
+      model = require('../controller/controller')
 
-app.route('/data/sensor')
-   .get(sensor.listSensor)
-   .delete(sensor.deleteAllSensor)
-   .post(sensor.addSensor)
+app.route('/')
+   .get(model.isLogin)
+
+app.route('/api/data/sensor')
+   .get(model.listSensor)
+   .delete(model.deleteAllSensor)
+   .post(model.addSensor)
 
 app
-    .get('/data/sensor/:sensor', sensor.selectSensor)
-    .delete('/data/sensor/:sensor', sensor.deleteSensor)
-    .put('/data/sensor/:sensor', sensor.updateSensor)
+    .route('/api/data/sensor/:sensor')
+    .get(model.selectSensor)
+    .delete(model.deleteSensor)
+    .put(model.updateSensor)
 
 module.exports = app
