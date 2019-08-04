@@ -30,4 +30,28 @@ const sensor = new Schema({
     }
 }, {collection: 'dataSensor'})
 
+const user = new Schema({
+    name: {
+        type: String,
+        required: "Name Required",
+        minlength: 2
+    },
+    email: {
+        type: String,
+        required: "Email Required",
+        minlength: 4
+    },
+    password: {
+        type: String,
+        required: "Password Required",
+        minlength: 4
+    },
+    phone : {
+        type: Number,
+        required: "Phone Number Required",
+        minlength: 6
+    }
+}, {collection: 'dataUser'})
+
 module.exports = mongoose.model("sensor", sensor)
+module.exports = mongoose.model("user", user)

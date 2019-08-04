@@ -1,6 +1,7 @@
 const mongoose = require("mongoose"),
       model = require("../model/model"),
-      sensor = mongoose.model("sensor");
+      sensor = mongoose.model("sensor"),
+      user = mongoose.model("user");
 
 //========================
 //        SENSOR
@@ -62,4 +63,19 @@ exports.deleteAllSensor = (req, res) => {
 //========================
 exports.isLogin = (req,res) => {
   res.redirect('/dashboard')
+}
+
+exports.addUser = (req,res) => {
+  var newUser = new user(req.body);
+  newUser.save((err,user) => {
+    if(err) res.send(err)
+    res.send("YAY! User has been added!! WOOHOO!!!")
+  })
+}
+
+exports.listUser = (req,res) => {
+  user.find({},(err,user) => {
+    if(err) res.send(err)
+    res.send(user)
+  })
 }

@@ -5,6 +5,10 @@ const express = require('express'),
 app.route('/')
    .get(model.isLogin)
 
+app.route('/api/data/user')
+   .get(model.listUser)
+   .post(model.addUser)
+
 app.route('/api/data/sensor')
    .get(model.listSensor)
    .delete(model.deleteAllSensor)
