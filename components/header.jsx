@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 import Media from "react-responsive";
-import { faBell, faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default props => (
   <Media query="(min-width: 769px)">
     <header id={props.id}>
-      <span id="bell-icon">
-        <FontAwesomeIcon icon={faBell} />
-      </span>
-      <span id="user-icon">
-        <FontAwesomeIcon icon={faUserCircle} />
-      </span>
+      <span id="bell-icon" className="fas fa-bell" />
+      <span id="user-icon" className="fas fa-user-circle" />
+      <span id="username" />
 
       <style jsx>{`
         header {
@@ -37,14 +32,14 @@ export default props => (
           top: -5px;
           right: 20px;
         }
-        #user-icon:before {
-          position:relative;
+        #username:before {
+          float: right;
+          position: relative;
           color: #555;
-          top: -5px;
-          right: 10px;
+          top: 3px;
+          right: 30px;
           font-size: 12pt;
           content: "Usman Namsu";
-          vertical-align: middle;
         }
       `}</style>
     </header>

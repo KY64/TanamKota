@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import Media from "react-responsive";
+
+const getTime = () => {
+  let time = new Date()
+  return time.toTimeString().slice(0,5)
+}
 
 export default props => (
   <React.Fragment>
@@ -8,15 +12,19 @@ export default props => (
       <span className="title">Recent Activity</span>
       <ul className="list">
         <li className="list-item">hello</li>
-        <li className="list-item" />
-        <li className="list-item" />
-        <li className="list-item" />
-        <li className="list-item" />
+        <li className="list-item">Huewo</li>
+        <li className="list-item">Huewo</li>
+        <li className="list-item">Huewo</li>
+        <li className="list-item">Huewo</li>
       </ul>
     </div>
     <style jsx>{`
+    div{
+      padding:30px 0 0 40px;
+    }
       .title {
         font-size: 18pt;
+        font-weight: 300;
       }
       ul {
         list-style: none;
@@ -37,6 +45,13 @@ export default props => (
         margin-right: 20px;
         display: inline-block;
         content: "";
+      }
+      li:after {
+        padding-right: 120px;
+        float:right;
+        font-size: 10pt;
+        font-weight: 300;
+        content: "${getTime()}";
       }
     `}</style>
   </React.Fragment>

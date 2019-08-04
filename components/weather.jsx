@@ -6,35 +6,46 @@ class Weather extends Component {
 
   render() {
     return (
-      <div id={this.props.id} className="d-flex">
-        <div className="item1">&nbsp;</div>
-        <div className="item2">&nbsp;</div>
-        <div className="item3">&nbsp;</div>
-        <div className="item4">&nbsp;</div>
-        <div className="item5">&nbsp;</div>
+      <div id={this.props.id} className="container">
+        <div className="item1"> <i className="fas fa-cloud-sun"></i> </div>
+        <div className="item2"><b style={{fontSize:"24pt"}}>30<sup>o</sup>C</b>
+        <br/>
+        Cerah Berawan
+        <br/>
+        Surabaya
+        </div>
+        <div className="item3"></div>
+
+        <div className="item4"><b style={{fontSize:"15pt"}}>BESOK</b> <br/> <i className="fas fa-cloud" style={{fontSize:"33pt",color:"#77E681"}}></i> </div>
+        <div className="item5"><b style={{fontSize:"15pt"}}>30<sup>o</sup>C</b><br/>Berawan</div>
 
         <style jsx>{`
-          .d-flex {
-            
-          }
           .container {
+            align-items: center;
+            justify-content:center;
             display: grid;
-            grid-template-areas: "icon1 info1 border icon2 info2";
+            grid-template-columns: 100px 130px repeat(3, 90px);
           }
           .item1 {
-            background: green;
+            font-size: 60pt;
+            color: #77E681;
           }
           .item2 {
-            background: grey;
+            color: #555;
+            justify-self:end;
           }
           .item3 {
-            background: yellow;
+            text-align:center;
+            border-left:1px solid rgba(0,0,0,.3);
+            justify-self:center;
+            height:70px;
           }
           .item4 {
-            background: orange;
+            color: #555;
           }
           .item5 {
-            background: skyblue;
+            color: #555;
+            margin: 22px 0 0 -18px;
           }
         `}</style>
       </div>

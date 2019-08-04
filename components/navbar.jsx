@@ -1,12 +1,5 @@
 import React, { Component } from "react";
 import Media from "react-responsive";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faListAlt,
-  faChartBar,
-  faArchive,
-  faCog
-} from "@fortawesome/free-solid-svg-icons";
 
 class Navbar extends Component {
   viewText() {
@@ -29,52 +22,53 @@ class Navbar extends Component {
             onMouseLeave={this.viewText}
           >
             <div className="nav-link">
-              <i className="fas fa-list-alt" style={{fontSize: "14pt"}}></i>
+              <i className="fas fa-list-alt" style={{ fontSize: "14pt" }} />
               <span className="text desc">Dashboard</span>
             </div>
             <div className="nav-link">
-              <i className="fas fa-chart-bar" style={{fontSize: "14pt"}}></i>
+              <i className="fas fa-chart-bar" style={{ fontSize: "14pt" }} />
               <span className="text desc">Analytics</span>
             </div>
             <div className="nav-link">
-              <i className="fas fa-archive" style={{fontSize: "14pt"}}></i>
+              <i className="fas fa-archive" style={{ fontSize: "14pt" }} />
               <span className="text desc">Log</span>
             </div>
             <div className="nav-link">
-              <i className="fas fa-cog" style={{fontSize: "14pt"}}></i>
+              <i className="fas fa-cog" style={{ fontSize: "14pt" }} />
               <span className="text desc">Settings</span>
             </div>
           </nav>
         </Media>
 
         <Media query="(max-width: 768px)">
-        <nav
+          <nav
             id={this.props.id}
             className="navbar-m"
             onMouseEnter={this.viewText}
             onMouseLeave={this.viewText}
           >
             <div className="nav-link-m">
-              <FontAwesomeIcon style={{ fontSize: "12pt" }} icon={faListAlt} />
+              <i className="fas fa-list-alt" style={{ fontSize: "14pt" }} />
               <span className="text desc">Dashboard</span>
             </div>
             <div className="nav-link-m">
-              <FontAwesomeIcon style={{ fontSize: "12pt" }} icon={faChartBar} />
+              <i className="fas fa-chart-bar" style={{ fontSize: "14pt" }} />
               <span className="text desc">Analytics</span>
             </div>
             <div className="nav-link-m">
-              <FontAwesomeIcon style={{ fontSize: "12pt" }} icon={faArchive} />
+              <i className="fas fa-archive" style={{ fontSize: "14pt" }} />
               <span className="text desc">Log</span>
             </div>
             <div className="nav-link-m">
-              <FontAwesomeIcon style={{ fontSize: "12pt" }} icon={faCog} />
+              <i className="fas fa-cog" style={{ fontSize: "14pt" }} />
               <span className="text desc">Settings</span>
             </div>
           </nav>
         </Media>
 
         <style jsx>{`
-          .navbar, .navbar-m {
+          .navbar,
+          .navbar-m {
             background: linear-gradient(0deg, #b9f75e, #77e681);
             color: white;
             display: flex;
@@ -92,7 +86,7 @@ class Navbar extends Component {
             flex-direction: row;
             padding: 0;
             justify-content: space-around;
-            align-items:center;
+            align-items: center;
           }
 
           .navbar:hover {
