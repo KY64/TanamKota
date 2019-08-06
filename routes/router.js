@@ -6,12 +6,9 @@ app.route('/')
    .get(model.isLogin)
 
 app.route('/login/auth')
-   .get((req,res) => {
-      res.send("hello wok!")
-   })
    .post(model.authentication)
 
-   app.route('/api/data/user')
+app.route('/api/data/user')
    .get(model.listUser)
    .post(model.addUser)
 

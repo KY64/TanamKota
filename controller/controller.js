@@ -85,11 +85,11 @@ exports.listUser = (req,res) => {
 
 exports.authentication = (req,res) => {
   user.findOne({email: req.body.email, password: req.body.password}, (err,user) => {
-    if(err) res.send(err)
+    if(err) {res.send(err); return}
     else if(user == null) {
       res.status(400).send("Email or password does not match")
       return
     }
-    res.send("Login SUCCESS!");
+    res.send('Login Success!')
   })
 }
