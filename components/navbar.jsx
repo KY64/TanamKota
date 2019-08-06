@@ -69,6 +69,7 @@ class Navbar extends Component {
         <style jsx>{`
           .navbar,
           .navbar-m {
+            position: fixed;
             background: linear-gradient(0deg, #b9f75e, #77e681);
             color: white;
             display: flex;
