@@ -3,7 +3,7 @@ const express = require('express'),
       next = require('next'),
       mongoose = require('mongoose'),
       PORT = process.env.PORT || 3000,
-      dev = process.env.NODE_DEV !== 'production',
+      dev = process.env.NODE_ENV !== 'production',
       Next = next({dev}),
       handle = Next.getRequestHandler()
 
