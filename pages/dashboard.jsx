@@ -29,6 +29,12 @@ class Index extends Component {
             href="https://fonts.googleapis.com/css?family=Nunito:300,400&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="shortcut icon"
+            href="/static/favicon.ico"
+            type="image/x-icon"
+          />
+          <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
           <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" />
         </Head>
         <Header id="header" />

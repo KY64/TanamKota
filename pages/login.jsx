@@ -17,14 +17,15 @@ class Login extends Component {
             href="https://fonts.googleapis.com/css?family=Nunito:300,400&display=swap"
             rel="stylesheet"
           />
+          <link
+            rel="shortcut icon"
+            href="/static/favicon.ico"
+            type="image/x-icon"
+          />
+          <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
         </Head>
         <div id="card">
-          <img
-            src="/static/plant.jpeg"
-            width="250"
-            height="500"
-            alt="plant"
-          />
+          <img src="/static/plant.jpeg" width="250" height="500" alt="plant" />
           <span className="overlay" />
           <div id="content">
             <h2 id="title">LOGIN</h2>
