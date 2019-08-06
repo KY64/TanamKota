@@ -33,7 +33,7 @@ const sensor = new Schema({
 const user = new Schema({
     name: {
         type: String,
-        required: "Name Required",
+        // required: "Name Required",
         minlength: 2
     },
     email: {
@@ -48,7 +48,7 @@ const user = new Schema({
     },
     phone : {
         type: Number,
-        required: "Phone Number Required",
+        // required: "Phone Number Required",
         minlength: 6
     }
 }, {collection: 'dataUser'})
