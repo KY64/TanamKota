@@ -69,8 +69,8 @@ exports.addUser = (req,res) => {
   var newUser = new user(req.body);
   newUser.save((err,user) => {
     if(err) {
-      res.send(err)
-      return;
+      res.status(400).send(err.errors)
+      return
     }
     res.send("YAY! User has been added!! WOOHOO!!!")
   })
