@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
+import PlantImage from "../components/plant-img"
 
 class Login extends Component {
   componentDidMount() {
@@ -19,10 +20,7 @@ class Login extends Component {
           />
         </Head>
         <div id="card">
-          <img
-            alt="image"
-            src="https://source.unsplash.com/Ftk2WBUIoXI/250x500"
-          />
+          <PlantImage />
           <span className="overlay" />
           <div id="content">
             <h2 id="title">LOGIN</h2>
