@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import PlantImage from "../components/plant-img"
+import plant from "../static/plant.jpg"
 
 class Login extends Component {
   componentDidMount() {
@@ -20,17 +20,23 @@ class Login extends Component {
           />
         </Head>
         <div id="card">
-          <PlantImage />
+          <img
+            src={plant}
+            width="250"
+            height="500"
+            alt="plant"
+          />
+          ;
           <span className="overlay" />
           <div id="content">
             <h2 id="title">LOGIN</h2>
             <form method="post">
               <div className="form">
-                <label for="form-email">Email</label>
+                <label>Email</label>
                 <input type="email" name="email" id="form-email" />
               </div>
               <div className="form">
-                <label for="form-password">Password</label>
+                <label>Password</label>
                 <input type="password" name="password" id="form-password" />
                 <a href="#" id="forgot-password">
                   Forgot Password?
@@ -40,7 +46,9 @@ class Login extends Component {
             </form>
             <div className="break">or</div>
             <h4>
-              <a href="#" id="signup">Sign Up</a>
+              <a href="#" id="signup">
+                Sign Up
+              </a>
             </h4>
           </div>
           <style jsx>{`
@@ -120,7 +128,8 @@ class Login extends Component {
               font-size: 13pt;
               outline: none;
             }
-            h4,#signup {
+            h4,
+            #signup {
               text-align: center;
               text-decoration: none;
               color: #0ebd1c;
