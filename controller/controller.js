@@ -68,7 +68,10 @@ exports.isLogin = (req,res) => {
 exports.addUser = (req,res) => {
   var newUser = new user(req.body);
   newUser.save((err,user) => {
-    if(err) res.send(err)
+    if(err) {
+      res.send(err)
+      return;
+    }
     res.send("YAY! User has been added!! WOOHOO!!!")
   })
 }
