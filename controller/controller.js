@@ -16,10 +16,12 @@ exports.listSensor = (req, res) => {
 };
 
 exports.addSensor = (req, res) => {
-  var newSensor = new sensor(req.query);
+
+  var newSensor = new sensor(req.query)
+
   newSensor.save((err, sensor) => {
     if (err) res.send(err);
-    res.json(sensor);
+    res.json(sensor); 
   });
 };
 

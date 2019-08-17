@@ -11,7 +11,8 @@ class Login extends Component {
     document.getElementById("login").onsubmit = () => {
       let email = document.getElementById("form-email").value;
       let password = document.getElementById("form-password").value;
-      fetch("http://localhost:3000/login/auth", {
+      let url = window.location.href
+      fetch( url + "/auth", {
         method: "post",
         headers: {
           "Content-Type": "application/json"

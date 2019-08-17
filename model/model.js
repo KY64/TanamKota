@@ -1,57 +1,65 @@
-const mongoose = require('mongoose'),
-      Schema = mongoose.Schema
+const mongoose = require("mongoose"),
+  Schema = mongoose.Schema;
 
 const localTime = () => {
-    let time = new Date()
-    return time.toLocaleString()
-}
+  let time = new Date();
+  return time.toLocaleString();
+};
 
-const sensor = new Schema({
-    sensorName: {
+const sensor = new Schema(
+  {
+    data: {
+      sensorName: {
         type: String,
         required: "Required Sensor Name",
         minlength: 2
-    },
-    value: {
+      },
+      value: {
         type: Number,
         immutable: true,
         required: "Undefined value",
         default: 0
-    },
-    status: {
+      },
+      status: {
         type: String,
-        enum: ["Critical","Stable"],
+        enum: ["Critical", "Stable"],
         default: "Stable"
-    },
-    time: {
+      },
+      time: {
         type: String,
         immutable: true,
         default: localTime()
+      }
     }
-}, {collection: 'dataSensor'})
+  },
+  { collection: "dataSensor" }
+);
 
-const user = new Schema({
+const user = new Schema(
+  {
     name: {
-        type: String,
-        // required: "Name Required",
-        minlength: 2
+      type: String,
+      // required: "Name Required",
+      minlength: 2
     },
     email: {
-        type: String,
-        required: "Email Required",
-        minlength: 4
+      type: String,
+      required: "Email Required",
+      minlength: 4
     },
     password: {
-        type: String,
-        required: "Password Required",
-        minlength: 4
+      type: String,
+      required: "Password Required",
+      minlength: 4
     },
-    phone : {
-        type: Number,
-        // required: "Phone Number Required",
-        minlength: 6
+    phone: {
+      type: Number,
+      // required: "Phone Number Required",
+      minlength: 6
     }
-}, {collection: 'dataUser'})
+  },
+  { collection: "dataUser" }
+);
 
-module.exports = mongoose.model("sensor", sensor)
-module.exports = mongoose.model("user", user)
+module.exports = mongoose.model("sensor", sensor);
+module.exports = mongoose.model("user", user);
