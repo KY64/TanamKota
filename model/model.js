@@ -10,7 +10,6 @@ const sensor = new Schema(
   {
     box: {
       type: Number,
-      unique: true,
       maxlength: 2
     },
     tanaman: {
@@ -21,7 +20,6 @@ const sensor = new Schema(
       waktu_tanam: {
         type: String,
         immutable: true,
-        required: true,
         default: localTime()
       },
       waktu_panen: {
