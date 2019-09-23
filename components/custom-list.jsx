@@ -1,22 +1,31 @@
 import React, { Component } from "react";
+import Media from "react-responsive";
 
 const getTime = () => {
-  let time = new Date()
-  return time.toTimeString().slice(0,5)
-}
+  let time = new Date();
+  return time.toTimeString().slice(0, 5);
+};
 
 export default props => (
-  <React.Fragment>
+  <>
     <div id={props.id}>
-
       <span className="title">Recent Activity</span>
-      <ul className="list">
-        <li className="list-item">hello</li>
-        <li className="list-item">Huewo</li>
-        <li className="list-item">Huewo</li>
-        <li className="list-item">Huewo</li>
-        <li className="list-item">Huewo</li>
-      </ul>
+      <Media query="(min-width: 769px)">
+        <ul className="list">
+          <li className="list-item">hello</li>
+          <li className="list-item">Huewo</li>
+          <li className="list-item">Huewo</li>
+          <li className="list-item">Huewo</li>
+          <li className="list-item">Huewo</li>
+        </ul>
+      </Media>
+      <Media query="(max-width: 768px)">
+        <ul className="list">
+          <li className="list-item">hello</li>
+          <li className="list-item">Huewo</li>
+          <li className="list-item">Huewo</li>
+        </ul>
+      </Media>
     </div>
     <style jsx>{`
     div{
@@ -53,6 +62,26 @@ export default props => (
         font-weight: 300;
         content: "${getTime()}";
       }
+
+      @media only screen and (max-width: 768px) {
+        div{
+          padding:15px 0 0 20px;
+        }
+        .title {
+          font-size: 14pt;
+        }
+        ul {
+          margin-left: 20px;
+        }
+        li {
+          margin-bottom: 10px;
+        }
+        li:after {
+          padding-right: 10px;
+          float:right;
+          content: "${getTime()}";
+        }
+      }
     `}</style>
-  </React.Fragment>
+  </>
 );

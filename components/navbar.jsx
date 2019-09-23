@@ -44,8 +44,6 @@ class Navbar extends Component {
           <nav
             id={this.props.id}
             className="navbar-m"
-            onMouseEnter={this.viewText}
-            onMouseLeave={this.viewText}
           >
             <div className="nav-link-m">
               <i className="fas fa-list-alt" style={{ fontSize: "14pt" }} />
@@ -88,6 +86,7 @@ class Navbar extends Component {
             padding: 0;
             justify-content: space-around;
             align-items: center;
+            bottom: 0;
           }
 
           .navbar:hover {

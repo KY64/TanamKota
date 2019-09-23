@@ -47,7 +47,7 @@ class LineChart extends Component {
 
         <style jsx>{`
             .line-chart {
-                width: 500px;
+                width: 100%;
                 justify-self: center;
                 align-self:center;
             }
