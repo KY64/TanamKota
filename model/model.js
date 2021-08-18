@@ -10,6 +10,7 @@ const sensor = new Schema(
   {
     box: {
       type: Number,
+      unique: true,
       maxlength: 2
     },
     tanaman: {
@@ -68,9 +69,7 @@ const sensor = new Schema(
         },
         status: {
           type: String,
-          type: String,
           enum: ["stable", "critical"],
-          default: "stable",
           default: "stable"
         }
       },
@@ -81,9 +80,7 @@ const sensor = new Schema(
         },
         status: {
           type: String,
-          type: String,
           enum: ["stable", "critical"],
-          default: "stable",
           default: "stable"
         }
       },

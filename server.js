@@ -7,7 +7,7 @@ const express = require('express'),
       Next = next({dev}),
       handle = Next.getRequestHandler()
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0-qsi9n.gcp.mongodb.net/TanamKota?retryWrites=true&w=majority`, {useNewUrlParser: true, useCreateIndex: true})
+mongoose.connect(`mongodb://localhost:27017/test_db`, {useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false})
 
 Next.prepare().then(() => {
 

@@ -18,9 +18,9 @@ app.route('/api/data/sensor')
    .post(model.addSensor)
 
 app
-    .route('/api/data/sensor/:sensor')
+    .route('/api/data/sensor/box/:box')
     .get(model.selectSensor)
     .delete(model.deleteSensor)
-    .put(model.updateSensor)
+    .post(model.updateSensor)
 
 module.exports = app

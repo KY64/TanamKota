@@ -12,7 +12,6 @@ export default props => (
     <style jsx global>{`
       .grid, .grid-m {
         display: grid;
-        width: 100%;
         grid-template-areas:
           "navbar header header"
           "navbar card1 card2"

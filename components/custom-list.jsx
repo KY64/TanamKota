@@ -9,19 +9,12 @@ const getTime = () => {
 export default props => (
   <>
     <div id={props.id}>
-      <span className="title">Recent Activity</span>
       <Media query="(min-width: 769px)">
+      <span className="title">Recent Activity</span>
         <ul className="list">
           <li className="list-item">hello</li>
           <li className="list-item">Huewo</li>
           <li className="list-item">Huewo</li>
-          <li className="list-item">Huewo</li>
-          <li className="list-item">Huewo</li>
-        </ul>
-      </Media>
-      <Media query="(max-width: 768px)">
-        <ul className="list">
-          <li className="list-item">hello</li>
           <li className="list-item">Huewo</li>
           <li className="list-item">Huewo</li>
         </ul>

@@ -6,6 +6,7 @@ class Weather extends Component {
 
   render() {
     return (
+      <Media query="(min-width: 769px)">
       <div id={this.props.id} className="container">
         <div className="item1"> <i className="fas fa-cloud-sun"></i> </div>
         <div className="item2"><b style={{fontSize:"24pt"}}>30<sup>o</sup>C</b>
@@ -49,6 +50,7 @@ class Weather extends Component {
           }
         `}</style>
       </div>
+      </Media>
     );
   }
 }

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import Head from "next/head";
+import Media from "react-responsive";
 import Grid from "../components/grid.jsx";
 import Navbar from "../components/navbar";
 import Header from "../components/header";
-import List from "../components/custom-list";
 import Weather from "../components/weather";
+import List from "../components/custom-list";
+import AddPlant from "../components/addPlant";
 import PieChart from "../components/pie-chart";
+import PieChartm from "../components/pie-chart-m";
 import LineChart from "../components/line-chart";
 
 class Index extends Component {
@@ -37,12 +40,18 @@ class Index extends Component {
           <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
           <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0" />
         </Head>
-        <Header id="header" />
         <Navbar id="navbar" />
-        <List id="card1" />
-        <Weather id="card2" />
-        <PieChart id="card3" />
-        <LineChart id="card4" />
+        <Media query="(min-width: 769px)">
+          <Header id="header" />
+          <List id="card1" />
+          <Weather id="card2" />
+          <PieChart id="card3" />
+          <LineChart id="card4" />
+        </Media>
+        <Media query="(max-width:768px)">
+          <PieChartm id="card1" />
+            <AddPlant />
+        </Media>
       </Grid>
     );
   }

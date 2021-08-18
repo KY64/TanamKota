@@ -27,7 +27,7 @@ exports.addSensor = (req, res) => {
 
 exports.selectSensor = (req, res) => {
   sensor
-    .find({ sensorName: req.params.sensor }, (err, sensor) => {
+    .find({ box: req.params.box }, (err, sensor) => {
       if (err) res.send(err);
       res.json(sensor);
     })
@@ -36,8 +36,8 @@ exports.selectSensor = (req, res) => {
 
 exports.updateSensor = (req, res) => {
   sensor.findOneAndUpdate(
-    { sensorName: req.params.sensor },
-    req.body,
+    { box: req.params.box },
+    {$push : req.query},
     { new: true },
     (err, sensor) => {
       if (err) res.send(err);
@@ -47,7 +47,7 @@ exports.updateSensor = (req, res) => {
 };
 
 exports.deleteSensor = (req, res) => {
-  sensor.deleteOne({ sensorName: req.params.sensor }, (err, sensor) => {
+  sensor.deleteOne({ box: req.params.box }, (err, sensor) => {
     if (err) res.send(err);
     res.json(sensor);
   });
